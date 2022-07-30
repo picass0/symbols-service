@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/app
+    depends_on:
+      - db
+    environment:
+      FLASK_APP: main
+      FLASK_ENV: development
+    command: ["flask", "run", "-h", "0.0.0.0", "-p", "8000"]
+
+
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_DB: symbols
+      POSTGRES_USER: symbols
+      POSTGRES_PASSWORD: secret
+    volumes:
+      - .dbdata:/var/lib/postgresql
+    ports:
+      - 54321:5432

@@ -1,0 +1,25 @@
+https://finviz.com/screener.ashx?v=152&f=geo_usa&o=-marketcap&c=0,1,2,3,4,5,6,7,10,11,12,13,14,16,24,25,26,28,30,31,33,37,38,39,40,63,64,65,66,67
+
+
+command:
+
+#todo - api tests and command tests
+#todo - unit tests for services
+#todo - log 500 errors
+#todo - typehints for data types
+#todo - test relationships - return symbol together with symbol-stats
+
+#todo - check memory consumption - metric
+#todo - check how many records were inserted - metric
+#todo - metric for database size and size of tables
+#todo - add fixer and/or linter
+#todo - rename commands package to console
+#todo - use url instead of creating screener manually
+#todo - add log info
+#todo - store log info inside kibana
+#todo - store web server logs inside kibana
+#todo - try newrelic
+#todo - either auth or hide from external api
+
+#todo - сертификаты по kubernetes на CNCF.
+#todo - mb generate docs for swagger automatically?
